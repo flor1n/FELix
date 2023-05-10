@@ -21,7 +21,7 @@ jobs:
         ruby-version: '2.0' # Not needed with a .ruby-version file
       #  bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - run: sudo apt-get install libusb-1.0.0-dev libffi-dev
-    - run: gem install ffi
+ #   - run: gem install ffi // ffi requires ruby >= 2.3 ...
     - run: gem install require
     - run: gem install hex_string
     - run: gem install hexdump
