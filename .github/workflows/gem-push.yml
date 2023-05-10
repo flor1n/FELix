@@ -26,7 +26,7 @@ jobs:
     - run: gem install hex_string
     - run: gem install hexdump
     - run: gem install colorize
-    - run: gem install optparse
+ #   - run: gem install optparse // optparse requires Ruby version >= 2.5.0.
     - run: gem install libusb
     - run: gem install bindata
     - run: gem install crc32
