@@ -24,5 +24,17 @@ jobs:
     - run: bundle
     - run: gem install require
     - run: gem install hex_string
+    - run: gem install hexdump
+    - run: gem install colorize
+    - run: gem install optparse
+    - run: gem install libusb
+    - run: gem install bindata
+    - run: gem install crc32
+    - run: gem install rc6
+    - run: gem install thread
+    - run: gem install inifile
+    - run: gem install fileutils
+    - run: gem install stringio
+    
     - run: chmod +x ./felix
     - run: ./felix --help 
