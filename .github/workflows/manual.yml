@@ -19,7 +19,7 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Install Ruby 
-      run: sudo apt-get install ruby2.0 ruby2.0-dev
+      run: sudo apt-get install ruby ruby-dev
 
     - name: Make link
       run: sudo ln -sf /usr/bin/ruby2.0 /usr/bin/ruby
