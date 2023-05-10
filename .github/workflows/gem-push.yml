@@ -19,9 +19,9 @@ jobs:
     - uses: ruby/setup-ruby@v1
       with:
         ruby-version: '2.0' # Not needed with a .ruby-version file
-        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+      #  bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - run: sudo apt-get install libusb-1.0.0-dev libffi-dev
-    - run: bundle
+    - run: gem install ffi
     - run: gem install require
     - run: gem install hex_string
     - run: gem install hexdump
@@ -35,6 +35,7 @@ jobs:
     - run: gem install inifile
     - run: gem install fileutils
     - run: gem install stringio
+    - run: bundle
     
     - run: chmod +x ./felix
     - run: ./felix --help 
