@@ -16,13 +16,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Set up Ruby 2.6
-      uses: actions/setup-ruby@v1
+    - uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.0.x
-
-    - name: init
-      run: |
-        gem install bundler
-        sudo apt-get install libusb-1.0.0-dev libffi-dev
-        bundle
+        ruby-version: '2.0' # Not needed with a .ruby-version file
+        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+    - run: sudo apt-get install libusb-1.0.0-dev libffi-dev
+    - run: bundle
