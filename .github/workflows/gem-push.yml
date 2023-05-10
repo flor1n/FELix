@@ -22,5 +22,7 @@ jobs:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - run: sudo apt-get install libusb-1.0.0-dev libffi-dev
     - run: bundle
+    - run: gem install require
+#    - fun: 
     - run: chmod +x ./felix
     - run: ./felix --help 
